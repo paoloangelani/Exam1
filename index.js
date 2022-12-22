@@ -122,12 +122,36 @@ const tasks = [
 ]
 
 
-/*for (i = 0; i < tasks.length; i++) {
+for (let i = 0; i < tasks.length; i++) {
+    const div = document.getElementById('todo')
+    const text = document.createElement('p')
+    text.innerHTML = tasks[i].todo
+    div.appendChild(text)
 
-} console.log(tasks)
+    console.log(tasks[i].completed)
 
-*/
-const todoList = (givenArray) => {
+    if (tasks[i].completed === true) {
+        text.style.backgroundColor = 'green'
+        text.style.display = 'none'
+    } else {
+        text.style.backgroundColor = 'red'
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const todoList = (givenArray) => {
     const allTodo = givenArray.map((givenArray) => {
         return { todo: givenArray.todo };
     });
@@ -139,3 +163,7 @@ console.log(
     todoList(tasks)
 );
 
+const box = document.createElement("div");
+box.id = "box";
+document.body.appendChild(box);
+*/
